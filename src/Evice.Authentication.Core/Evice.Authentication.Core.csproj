@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Responses\" />
+    <Compile Remove="Commands\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <None Remove="Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Requests\" />
+    <Folder Include="Models\SeedWork\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Business\" />
+    <Folder Include="Validators\" />
   </ItemGroup>
 
 </Project>
