@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Evice.Authentication.Application\Evice.Authentication.Core.csproj" />
+    <ProjectReference Include="..\Evice.Authentication.Core\Evice.Authentication.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
