@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{A94B14F9-3BC
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Application", "src\Evice.Authentication.Application\Evice.Authentication.Application.csproj", "{A3CF3170-0215-40CF-817C-8BC8C444DEF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Api", "src\Evice.Authentication.Api\Evice.Authentication.Api.csproj", "{A3CF3170-0215-40CF-817C-8BC8C444DEF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Core", "src\Evice.Authentication.Core\Evice.Authentication.Core.csproj", "{2CCA60D9-DFC6-422F-A119-0E497E4E0AB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Application", "src\Evice.Authentication.Application\Evice.Authentication.Application.csproj", "{2CCA60D9-DFC6-422F-A119-0E497E4E0AB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Infrastructure", "src\Evice.Authentication.Repository\Evice.Authentication.Infrastructure.csproj", "{6C99828B-6D14-4548-BDBB-0899E97C7127}"
 EndProject
