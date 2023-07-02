@@ -2,6 +2,9 @@
 
 # Evice.Authentication
 
+### Referências
+- [Arquitetura](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures#clean-architecture)
+
 ### Dependências
  - .NET 6
  - Swashbuckle.
