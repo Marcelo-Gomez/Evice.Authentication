@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Responses\" />
-    <Folder Include="Commands\Requests\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="AutoMapper\" />
-    <Folder Include="Validators\" />
+    <Folder Include="Consts\" />
+    <Folder Include="Enums\" />
+    <Folder Include="AggregatesModel\" />
+    <Folder Include="Settings\" />
+    <Folder Include="SeedWork\" />
   </ItemGroup>
 
 </Project>
