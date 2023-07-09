@@ -7,14 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AggregatesModel\CompanyAggregate\" />
-    <Folder Include="Consts\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Settings\" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="7.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <ProjectReference Include="..\Evice.Authentication.Domain\Evice.Authentication.Domain.csproj" />
   </ItemGroup>
 
 </Project>

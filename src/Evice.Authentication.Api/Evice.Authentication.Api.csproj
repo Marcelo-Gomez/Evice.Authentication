@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Evice.Authentication.Core\Evice.Authentication.Application.csproj" />
+    <ProjectReference Include="..\Evice.Authentication.Application\Evice.Authentication.Application.csproj" />
+    <ProjectReference Include="..\Evice.Authentication.Infrastructure.IoC\Evice.Authentication.Infrastructure.IoC.csproj" />
   </ItemGroup>
 
   <ItemGroup>
