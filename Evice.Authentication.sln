@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.UnitTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Domain", "src\Evice.Authentication.Domain\Evice.Authentication.Domain.csproj", "{4180A534-684C-41BF-88A7-9DF31220EE5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evice.Authentication.Infrastructure.IoC", "src\Evice.Authentication.Infrastructure.IoC\Evice.Authentication.Infrastructure.IoC.csproj", "{51CB8CAA-CA0A-493C-BF1E-7CA798E53092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evice.Authentication.Infrastructure.IoC", "src\Evice.Authentication.Infrastructure.IoC\Evice.Authentication.Infrastructure.IoC.csproj", "{51CB8CAA-CA0A-493C-BF1E-7CA798E53092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

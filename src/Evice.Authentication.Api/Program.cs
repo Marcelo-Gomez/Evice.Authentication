@@ -1,3 +1,4 @@
+using Evice.Authentication.Api.Extensions;
 using Evice.Authentication.Application.Commands.Requests;
 using Evice.Authentication.Application.Queries;
 using Evice.Authentication.Application.Queries.Interfaces;
@@ -43,6 +44,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseProblemDetailsExceptionHandler();
 
 app.MapControllers();
 

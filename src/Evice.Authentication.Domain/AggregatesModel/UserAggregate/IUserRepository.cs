@@ -4,8 +4,8 @@
     {
         Task<bool> AddUser(User user);
 
-        Task UpdateUser(User user);
+        Task<bool> UpdateUser(User user);
 
-        Task DeleteUser(string id);
+        Task<bool> DeleteUser(string id);
     }
 }

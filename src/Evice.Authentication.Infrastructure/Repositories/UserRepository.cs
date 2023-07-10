@@ -1,22 +1,73 @@
-﻿using Evice.Authentication.Domain.AggregatesModel.UserAggregate;
+﻿using Dapper;
+using Evice.Authentication.Domain.AggregatesModel.UserAggregate;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Data;
 
 namespace Evice.Authentication.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public Task<bool> AddUser(User user)
+        private readonly string _connectionString;
+
+        public UserRepository(IConfiguration configuration) 
+            => this._connectionString = configuration.GetConnectionString("SqlServerDatabase");
+
+        public async Task<bool> AddUser(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (IDbConnection dbConnection = new SqlConnection(this._connectionString))
+                {
+                    dbConnection.Open();
+
+                    await dbConnection.ExecuteAsync("");
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task DeleteUser(string id)
+        public async Task<bool> UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (IDbConnection dbConnection = new SqlConnection(this._connectionString))
+                {
+                    dbConnection.Open();
+
+                    await dbConnection.ExecuteAsync("");
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task UpdateUser(User user)
+        public async Task<bool> DeleteUser(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (IDbConnection dbConnection = new SqlConnection(this._connectionString))
+                {
+                    dbConnection.Open();
+
+                    await dbConnection.ExecuteAsync("");
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
