@@ -8,7 +8,7 @@ namespace Evice.Authentication.Api.Extensions
 {
     public static class GlobalExceptionHandlingExtension
     {
-        public static void UseProblemDetailsExceptionHandler(this IApplicationBuilder app)
+        public static void UseGlobalExceptionHandler(this IApplicationBuilder app)
         {
             app.UseExceptionHandler(builder =>
             {
@@ -22,21 +22,18 @@ namespace Evice.Authentication.Api.Extensions
 
                         var response = new ResponseBase<object>();
 
-                        if (exception is ValidationException validationException)
+                        switch (exception)
                         {
-                            response.AddError(HttpStatusCode.BadRequest, validationException.Message);
-                        }
-                        else if (exception is BadHttpRequestException badHttpRequestException)
-                        {
-                            response.AddError(HttpStatusCode.BadRequest, badHttpRequestException.Message);
-                        }
-                        else if (exception is NotImplementedException)
-                        {
-                            response.AddError(HttpStatusCode.NotImplemented, exception.Message);
-                        }
-                        else
-                        {
-                            response.AddError(HttpStatusCode.InternalServerError, "The server encountered an unexpected condition that prevented it from fulfilling the request.");
+                            case ValidationException:
+                            case BadHttpRequestException:
+                                response.AddError(HttpStatusCode.BadRequest, exception.Message);
+                                break;
+                            case NotImplementedException:
+                                response.AddError(HttpStatusCode.NotImplemented, exception.Message);
+                                break;
+                            default:
+                                response.AddError(HttpStatusCode.InternalServerError, "The server encountered an unexpected condition that prevented it from fulfilling the request.");
+                                break;
                         }
 
                         context.Response.StatusCode = (int)response.HttpStatusCode;

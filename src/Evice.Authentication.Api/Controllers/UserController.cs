@@ -10,8 +10,7 @@ namespace Evice.Authentication.Application.Controllers
     {
         private readonly IMediator _mediator;
 
-        public UserController(IMediator mediator) 
-            => this._mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        public UserController(IMediator mediator) => this._mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         
         [HttpPost("add")]
         public async Task<IActionResult> AddUser([FromBody] AddUserRequest command)
