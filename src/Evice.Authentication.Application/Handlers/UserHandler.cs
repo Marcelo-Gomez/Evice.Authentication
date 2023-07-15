@@ -57,12 +57,6 @@ namespace Evice.Authentication.Application.Handlers
         {
             var response = new ResponseBase<AddUserResponse>();
 
-            var result = await this._validator.ValidateAsync(request);
-            if (!result.IsValid)
-            {
-                response.AddErrors(HttpStatusCode.BadRequest, result.Errors);
-            }
-
             var user = await this._userQuery.GetUser(request.Email);
             if (user != null)
             {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Evice.Authentication.Application.Controllers
 {
     [ApiController]
-    [Route("api/v1/user")]
+    [Route("api/v1/[controller]")]
     public class UserController : Controller
     {
         private readonly IMediator _mediator;

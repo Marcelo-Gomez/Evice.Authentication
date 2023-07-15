@@ -32,7 +32,8 @@ namespace Evice.Authentication.Api.Extensions
                                 response.AddError(HttpStatusCode.NotImplemented, exception.Message);
                                 break;
                             default:
-                                response.AddError(HttpStatusCode.InternalServerError, "The server encountered an unexpected condition that prevented it from fulfilling the request.");
+                                const string message = "The server encountered an unexpected condition that prevented it from fulfilling the request.";
+                                response.AddError(HttpStatusCode.InternalServerError, message);
                                 break;
                         }
 

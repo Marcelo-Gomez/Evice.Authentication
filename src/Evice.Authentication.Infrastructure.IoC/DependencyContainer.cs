@@ -7,15 +7,17 @@ namespace Evice.Authentication.Infrastructure.IoC
     {
         public static void AddServices(this IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+            //services.AddControllers();
+            //services.AddEndpointsApiExplorer();
+            //services.AddSwaggerGen();
 
             services.AddValidators();
 
             services.AddQueries();
 
             services.AddRepositories();
+
+            services.AddServices();
 
             var assembly = AppDomain.CurrentDomain.Load("Evice.Authentication.Application");
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
