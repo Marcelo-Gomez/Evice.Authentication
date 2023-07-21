@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Evice.Authentication.Domain.AggregatesModel.UserAggregate;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
 using System.Data;
 
 namespace Evice.Authentication.Infrastructure.Repositories
@@ -10,8 +9,8 @@ namespace Evice.Authentication.Infrastructure.Repositories
     {
         private readonly string _connectionString;
 
-        public UserRepository(IConfiguration configuration) 
-            => this._connectionString = configuration.GetConnectionString("SqlServerDatabase");
+        //public UserRepository(IConfiguration configuration) 
+        //    => this._connectionString = configuration.GetConnectionString("SqlServerDatabase");
 
         public async Task<bool> AddUser(User user)
         {

@@ -1,27 +1,24 @@
-﻿using Evice.Authentication.Infrastructure.IoC.Dependencies;
+﻿using Evice.Authentication.Application.Queries;
+using Evice.Authentication.Application.Queries.Interfaces;
+using Evice.Authentication.Infrastructure.IoC.Dependencies;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Evice.Authentication.Infrastructure.IoC
 {
     public static class DependencyContainer
     {
-        public static void AddServices(this IServiceCollection services)
+        public static void AddServices(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddControllers();
-            //services.AddEndpointsApiExplorer();
-            //services.AddSwaggerGen();
-
-            services.AddValidators();
-
             services.AddQueries();
 
             services.AddRepositories();
 
             services.AddServices();
 
-            var assembly = AppDomain.CurrentDomain.Load("Evice.Authentication.Application");
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
-            services.AddAutoMapper(assembly);
+            services.AddValidators();
+
+            services.AddHandlers();
         }
     }
 }

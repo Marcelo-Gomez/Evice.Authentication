@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{A94B14F9-3BC1-414B-B366-5B8558F51270}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
+		Dockerfile = Dockerfile
 		README.md = README.md
 	EndProjectSection
 EndProject

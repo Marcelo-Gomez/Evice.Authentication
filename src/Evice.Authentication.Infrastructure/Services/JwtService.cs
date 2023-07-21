@@ -13,10 +13,11 @@ namespace Evice.Authentication.Infrastructure.Services
         private readonly JwtSecurityTokenHandler _jwtSecurityTokenHandler;
         private readonly string _jwtSecret;
 
-        public JwtService(JwtSecurityTokenHandler jwtSecurityTokenHandler, IConfiguration configuration)
+        public JwtService()
+            //JwtSecurityTokenHandler jwtSecurityTokenHandler, IConfiguration configuration)
         {
-            this._jwtSecurityTokenHandler = jwtSecurityTokenHandler ?? throw new ArgumentNullException(nameof(jwtSecurityTokenHandler));
-            this._jwtSecret = configuration["Jwt:Secret"] ?? throw new ArgumentNullException(nameof(configuration));
+            //this._jwtSecurityTokenHandler = jwtSecurityTokenHandler ?? throw new ArgumentNullException(nameof(jwtSecurityTokenHandler));
+            //this._jwtSecret = configuration["Jwt:Secret"] ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         public string GenerateEncodedToken(UserInfoToken userInfoToken, int expirationInSeconds)
