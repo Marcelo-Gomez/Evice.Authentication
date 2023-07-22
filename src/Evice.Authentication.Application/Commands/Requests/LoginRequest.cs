@@ -1,10 +1,9 @@
 ﻿using Evice.Authentication.Application.Commands.Responses;
 using Evice.Authentication.Domain.SeedWork.Bases;
-using MediatR;
 
 namespace Evice.Authentication.Application.Commands.Requests
 {
-    public class LoginRequest : IRequest<ResponseBase<LoginResponse>>
+    public class LoginRequest
     {
         public string Email { get; set; }
 

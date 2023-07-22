@@ -10,9 +10,9 @@ namespace Evice.Authentication.Application.Controllers
     {
         private readonly IUserHandler _userHandler;
 
-        public UserController(IUserHandler userHandler) 
+        public UserController(IUserHandler userHandler)
             => this._userHandler = userHandler ?? throw new ArgumentNullException(nameof(userHandler));
-        
+
         [HttpPost("add")]
         public async Task<IActionResult> AddUser([FromBody] AddUserRequest request)
         {

@@ -1,6 +1,4 @@
-﻿using Evice.Authentication.Application.Queries;
-using Evice.Authentication.Application.Queries.Interfaces;
-using Evice.Authentication.Infrastructure.IoC.Dependencies;
+﻿using Evice.Authentication.Infrastructure.IoC.Dependencies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

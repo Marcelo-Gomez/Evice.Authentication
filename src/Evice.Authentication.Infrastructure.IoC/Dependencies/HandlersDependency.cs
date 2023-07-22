@@ -8,7 +8,7 @@ namespace Evice.Authentication.Infrastructure.IoC.Dependencies
     {
         public static void AddHandlers(this IServiceCollection services)
         {
-            services.AddTransient<IUserHandler, UserHandler>();
+            services.AddScoped<IUserHandler, UserHandler>();
         }
     }
 }

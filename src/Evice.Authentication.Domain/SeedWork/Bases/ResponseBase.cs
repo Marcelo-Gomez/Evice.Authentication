@@ -52,5 +52,22 @@ namespace Evice.Authentication.Domain.SeedWork.Bases
                 this.Errors.Add(new ErrorBase(error.ErrorMessage));
             }
         }
+
+        public void AddErrors(IEnumerable<string> errors, HttpStatusCode httpStatusCode = HttpStatusCode.BadRequest)
+        {
+            this.Data = default;
+            this.Success = false;
+            this.HttpStatusCode = httpStatusCode;
+
+            if (this.Errors == null)
+            {
+                this.Errors = new List<ErrorBase>();
+            }
+
+            foreach (var error in errors)
+            {
+                this.Errors.Add(new ErrorBase(error));
+            }
+        }
     }
 }
