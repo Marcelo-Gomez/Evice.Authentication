@@ -1,5 +1,5 @@
-﻿using Evice.Authentication.Application.Commands.Requests;
-using Evice.Authentication.Application.Commands.Responses;
+﻿using Evice.Authentication.Application.Commands.Requests.User;
+using Evice.Authentication.Application.Commands.Responses.User;
 using Evice.Authentication.Domain.SeedWork.Bases;
 
 namespace Evice.Authentication.Application.Handlers.Interfaces

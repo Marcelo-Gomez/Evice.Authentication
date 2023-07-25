@@ -1,4 +1,4 @@
-﻿using Evice.Authentication.Application.Commands.Requests;
+﻿using Evice.Authentication.Application.Commands.Requests.User;
 using FluentValidation;
 
 namespace Evice.Authentication.Application.Validators.User

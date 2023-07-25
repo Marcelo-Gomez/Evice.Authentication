@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Evice.Authentication.Application.Commands.Responses
+namespace Evice.Authentication.Application.Commands.Responses.Authentication
 {
     public class LoginResponse
     {

@@ -8,6 +8,8 @@ namespace Evice.Authentication.Infrastructure.IoC.Dependencies
     {
         public static void AddHandlers(this IServiceCollection services)
         {
+            services.AddScoped<IRoleHandler, RoleHandler>();
+
             services.AddScoped<IUserHandler, UserHandler>();
         }
     }

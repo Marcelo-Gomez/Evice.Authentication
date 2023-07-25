@@ -8,6 +8,12 @@ namespace Evice.Authentication.Infrastructure.IoC.Dependencies
     {
         public static void AddQueries(this IServiceCollection services)
         {
+            services.AddScoped<IAuthenticationQuery, AuthenticationQuery>();
+
+            services.AddScoped<ICompanyQuery, CompanyQuery>();
+
+            services.AddScoped<IRoleQuery, RoleQuery>();
+
             services.AddScoped<IUserQuery, UserQuery>();
         }
     }

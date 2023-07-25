@@ -1,7 +1,7 @@
 ﻿using Evice.Authentication.Application.Commands.Responses;
 using Evice.Authentication.Domain.SeedWork.Bases;
 
-namespace Evice.Authentication.Application.Commands.Requests
+namespace Evice.Authentication.Application.Commands.Requests.User
 {
     public class AddUserRequest
     {

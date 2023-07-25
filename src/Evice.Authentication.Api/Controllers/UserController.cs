@@ -1,4 +1,4 @@
-﻿using Evice.Authentication.Application.Commands.Requests;
+﻿using Evice.Authentication.Application.Commands.Requests.User;
 using Evice.Authentication.Application.Handlers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,4 @@
-﻿namespace Evice.Authentication.Application.Commands.Responses
+﻿namespace Evice.Authentication.Application.Commands.Responses.User
 {
     public class AddUserResponse
     {

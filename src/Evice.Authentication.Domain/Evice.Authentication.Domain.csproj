@@ -7,13 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AggregatesModel\CompanyAggregate\" />
-    <Folder Include="Consts\" />
     <Folder Include="Enums\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="FluentValidation" Version="10.4.0" />
   </ItemGroup>
 
 </Project>

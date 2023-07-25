@@ -1,4 +1,4 @@
-﻿namespace Evice.Authentication.Application.Commands.Requests
+﻿namespace Evice.Authentication.Application.Commands.Requests.Authentication
 {
     public class ForgotPasswordRequest
     {

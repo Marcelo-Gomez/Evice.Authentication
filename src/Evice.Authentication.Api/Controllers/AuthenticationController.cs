@@ -1,4 +1,5 @@
-﻿using Evice.Authentication.Application.Commands.Requests;
+﻿using Evice.Authentication.Application.Commands.Requests.Authentication;
+using Evice.Authentication.Application.Commands.Requests.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Evice.Authentication.Application.Controllers

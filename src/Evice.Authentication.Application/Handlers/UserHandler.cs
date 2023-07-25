@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Evice.Authentication.Application.Commands.Requests;
-using Evice.Authentication.Application.Commands.Responses;
+using Evice.Authentication.Application.Commands.Requests.User;
+using Evice.Authentication.Application.Commands.Responses.User;
 using Evice.Authentication.Application.Handlers.Interfaces;
 using Evice.Authentication.Application.Queries.Interfaces;
 using Evice.Authentication.Domain.AggregatesModel.UserAggregate;
+using Evice.Authentication.Domain.Consts;
 using Evice.Authentication.Domain.SeedWork.Bases;
 using Evice.Authentication.Infrastructure.Services;
-using FluentValidation;
 using System.Net;
 
 namespace Evice.Authentication.Application.Handlers
@@ -35,13 +35,12 @@ namespace Evice.Authentication.Application.Handlers
 
             var user = this._mapper.Map<User>(request);
             user.EncryptedPassword = EncryptionService.GetHashedPassword(user.EncryptedPassword);
-            user.Active = true;
 
             var userAdded = await this._userRepository.AddUser(user);
 
             if (!userAdded)
             {
-                response.AddError(HttpStatusCode.InternalServerError, "An error occurred while adding the user to the database.");
+                response.AddError(HttpStatusCode.InternalServerError, ErrorMessagesConst.DatabaseAddInternalServerError);
 
                 return response;
             }

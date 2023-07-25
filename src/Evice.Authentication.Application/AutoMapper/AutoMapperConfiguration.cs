@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Evice.Authentication.Application.Commands.Requests;
-using Evice.Authentication.Application.Commands.Responses;
+using Evice.Authentication.Application.Commands.Requests.User;
+using Evice.Authentication.Application.Commands.Responses.User;
 using Evice.Authentication.Domain.AggregatesModel.UserAggregate;
 
 namespace Evice.Authentication.Application.AutoMapper
