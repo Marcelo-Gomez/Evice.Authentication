@@ -16,7 +16,15 @@ namespace Evice.Authentication.Api.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> Add([FromBody] AddCompanyRequest request)
         {
-            var response = await this._companyHandler.Handle(request);
+            var response = await this._companyHandler.Add(request);
+
+            return StatusCode((int)response.HttpStatusCode, response);
+        }
+
+        [HttpPost("update")]
+        public async Task<IActionResult> Update([FromBody] UpdateCompanyRequest request)
+        {
+            var response = await this._companyHandler.Update(request);
 
             return StatusCode((int)response.HttpStatusCode, response);
         }

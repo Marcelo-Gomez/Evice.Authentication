@@ -2,6 +2,6 @@
 {
     public class AddCompanyResponse
     {
-
+        public Guid Id { get; set; }
     }
 }

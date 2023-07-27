@@ -6,6 +6,6 @@
 
         Task<bool> Update(TEntity entity);
 
-        Task<bool> Delete(string id);
+        Task<bool> Delete(Guid id);
     }
 }

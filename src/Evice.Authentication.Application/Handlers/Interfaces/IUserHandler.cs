@@ -6,6 +6,6 @@ namespace Evice.Authentication.Application.Handlers.Interfaces
 {
     public interface IUserHandler
     {
-        Task<ResponseBase<AddUserResponse>> Handle(AddUserRequest request);
+        Task<ResponseBase<AddUserResponse>> Add(AddUserRequest request);
     }
 }

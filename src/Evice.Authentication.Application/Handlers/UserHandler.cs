@@ -24,7 +24,7 @@ namespace Evice.Authentication.Application.Handlers
             this._userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
         }
 
-        public async Task<ResponseBase<AddUserResponse>> Handle(AddUserRequest request)
+        public async Task<ResponseBase<AddUserResponse>> Add(AddUserRequest request)
         {
             var response = await this.ValidateRequest(request);
 

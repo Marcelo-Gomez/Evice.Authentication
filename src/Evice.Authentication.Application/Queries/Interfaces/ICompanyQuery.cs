@@ -2,7 +2,9 @@
 {
     public interface ICompanyQuery
     {
-        Task<bool> CheckCompanyExists(string id);
+        Task<bool> CheckCompanyExists(Guid id);
+
+        Task<bool> CheckCompanyExists(string document);
 
         Task<bool> CheckCompanyExistsById(string Id);
     }

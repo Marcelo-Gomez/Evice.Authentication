@@ -1,7 +1,6 @@
-﻿namespace Evice.Authentication.Domain.AggregatesModel.CompanyAggregate
+﻿using Evice.Authentication.Domain.SeedWork;
+
+namespace Evice.Authentication.Domain.AggregatesModel.CompanyAggregate
 {
-    public interface ICompanyRepository
-    {
-        Task<bool> AddCompany(Company company);
-    }
+    public interface ICompanyRepository : IRepository<Company> { }
 }
