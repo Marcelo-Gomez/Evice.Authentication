@@ -9,6 +9,11 @@ namespace Evice.Authentication.Application.Queries
             throw new NotImplementedException();
         }
 
+        public Task<bool> CheckCompanyExists(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<bool> CheckCompanyExistsById(string Id)
         {
             return false;

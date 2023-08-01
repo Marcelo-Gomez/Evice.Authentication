@@ -4,7 +4,7 @@ namespace Evice.Authentication.Application.Queries.Interfaces
 {
     public interface IRoleQuery
     {
-        Task<bool> CheckRoleExists(string roleId);
+        Task<bool> CheckRoleExists(Guid roleId);
 
         Task<bool> CheckNameExists(string companyId, string name);
 

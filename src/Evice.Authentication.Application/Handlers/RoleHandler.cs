@@ -69,7 +69,7 @@ namespace Evice.Authentication.Application.Handlers
             return response;
         }
 
-        public async Task<ResponseBase<RoleResponse>> Delete(string roleId)
+        public async Task<ResponseBase<RoleResponse>> Delete(Guid roleId)
         {
             var response = await this.ValidateRequest(roleId);
             if (!response.Success)
@@ -109,7 +109,7 @@ namespace Evice.Authentication.Application.Handlers
             return response;
         }
 
-        private async Task<ResponseBase<RoleResponse>> ValidateRequest(string roleId)
+        private async Task<ResponseBase<RoleResponse>> ValidateRequest(Guid roleId)
         {
             var response = new ResponseBase<RoleResponse>();
 

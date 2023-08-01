@@ -11,7 +11,7 @@ namespace Evice.Authentication.Application.Queries
             //throw new NotImplementedException();
         }
 
-        public Task<bool> CheckRoleExists(string roleId)
+        public Task<bool> CheckRoleExists(Guid roleId)
         {
             throw new NotImplementedException();
         }

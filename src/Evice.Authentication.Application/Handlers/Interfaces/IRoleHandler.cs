@@ -10,6 +10,6 @@ namespace Evice.Authentication.Application.Handlers.Interfaces
 
         Task<ResponseBase<RoleResponse>> Update(RoleRequest request);
 
-        Task<ResponseBase<RoleResponse>> Delete(string roleId);
+        Task<ResponseBase<RoleResponse>> Delete(Guid roleId);
     }
 }

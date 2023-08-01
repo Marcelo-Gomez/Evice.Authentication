@@ -14,6 +14,11 @@ namespace Evice.Authentication.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
+        public Task<bool> Delete(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> Update(Role entity)
         {
             throw new NotImplementedException();

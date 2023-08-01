@@ -16,7 +16,7 @@ namespace Evice.Authentication.Application.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddUser([FromBody] AddUserRequest request)
         {
-            var response = await this._userHandler.Handle(request);
+            var response = await this._userHandler.Add(request);
 
             return StatusCode((int)response.HttpStatusCode, response);
         }

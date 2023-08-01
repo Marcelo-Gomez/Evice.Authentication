@@ -1,11 +1,22 @@
-version: '3'
+version: '3.5'
 
 services:
-  sqlserver:
+
+  evice-authentication:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mssql
+
+  mssql:
     image: mcr.microsoft.com/mssql/server:latest
-    container_name: mssql
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: "Evice@Pass"
+    container_name: SqlServer
     ports:
       - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Evice@Pass
+      - MSSQL_COLLATION=Latin1_General_CI_AI
+    volumes:
+      - ./data:/D:/Programming/Database/sqlserver

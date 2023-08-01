@@ -35,7 +35,7 @@ namespace Evice.Authentication.Api.Controllers
         }
 
         [HttpPost("delete")]
-        public async Task<IActionResult> Delete([FromBody] string roleId)
+        public async Task<IActionResult> Delete([FromBody] Guid roleId)
         {
             var response = await this._roleHandler.Delete(roleId);
 
